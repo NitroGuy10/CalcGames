@@ -1,0 +1,199 @@
+Lbl ME
+ClrHome
+Disp "==========================
+Disp "         {SERPENT}
+Disp "==========================
+Disp "
+Disp "          >PLAY!<
+Disp "           ABOUT
+Disp "           CLOSE
+Disp "
+
+Disp "       BY:  NITROGUY
+2→S
+0→C
+1→C
+Repeat K=45
+getKey→K
+If Ans:Then
+If K=105:Then
+If S=4
+Goto X
+If S=2
+Goto SN
+If S=3
+Goto AB
+End
+If K=34:Then
+If S<4
+S+1→S
+End
+If K=25:Then
+If S>2
+S-1→S
+End
+Output(S+3,11,">
+Output(S+3,17,"<
+If S≠2:Then
+Output(S+2,11," 
+Output(S+2,17," 
+End
+Output(S+4,11," 
+Output(S+4,17," 
+End
+End
+Goto X
+Lbl AB
+ClrHome
+Disp "           ABOUT
+Disp "SERPENT FOR THE TI-84
+Disp "PLUS CE. WRITTEN IN
+Disp "TI-BASIC OVER THE COURSE
+Disp "OF ONE WEEK. MADE BY
+Disp "NITROGUY. DATE OF
+Disp "COMPLETION: JAN 5, 2017
+Disp "
+Disp "        PRESS ENTER
+Pause 
+Goto ME
+Lbl SN
+ClrHome
+Disp "         SERPENT
+Disp "YOU ARE TRAPPED IN A
+Disp "DARK CAVE, HOME TO THE
+Disp "PHANTOM SERPENT. YOU CAN
+Disp "LIGHT UP THE PATH WITH
+Disp "YOUR TORCH, BUT IT GOES
+Disp "OUT EVERY 200 STEPS.
+Disp "YOU MUST SURVIVE LONG
+Disp "ENOUGH TO KILL THE SNAKE.
+Pause 
+ClrHome
+Disp "      X=PLAYER
+Disp "      O=DARKNESS
+Disp "      T=SUPER TORCH
+Disp "      W=SPIKES
+Disp "
+Disp "    ARROW KEYS TO MOVE
+Pause 
+ClrHome
+Menu("SNAKE","EASY",S1,"NORMAL",S2,"HARD",S3
+Lbl S1
+.1→G
+Goto SS
+Lbl S2
+.25→G
+Goto SS
+Lbl S3
+.5→G
+Lbl SS
+Menu("GAME LENTH","QUICK",L1,"MEDIUM",L2,"LONG",L3
+Lbl L1
+425→L
+Goto DS
+Lbl L2
+700→L
+Goto DS
+Lbl L3
+1000→L
+Lbl DS
+1→A
+1→B
+10→C
+26→D
+0→T
+0→Q
+0→R
+0→θ
+randInt(50,150)→V
+randInt(250,350)→W
+randInt(450,550)→X
+randInt(650,750)→Y
+randInt(850,950)→Z
+For(M,1,10
+For(N,1,26
+Output(M,N,"O
+End
+End
+0→θ
+Repeat K=45 or θ≠0
+getKey→K
+If Q=L:Then
+1001→Q
+Output(2,2,"W
+Output(9,2,"W
+Output(2,25,"W
+Output(9,25,"W
+End
+If Q>1000:Then
+For(I,2,9,7)
+For(U,2,25,23)
+If A=I and B=U
+1→θ
+If C=I and D=U
+2→θ
+End
+End
+End
+If θ=2:Then
+For(M,1,10
+For(N,1,26
+Output(M,N," 
+End
+End
+Output(5,10,"YOU WIN!
+Output(6,8,"GOOD JOB! :)
+Pause 
+Goto ME
+End
+
+If A=C and B=D
+1→θ
+If Q=200 or Q=400 or Q=600 or Q=800:Then
+For(M,1,10
+For(N,1,26
+Output(M,N,"O
+End
+End
+End
+If Q=V:Then:1→R:0→V:End
+If Q=W:Then:1→R:0→W:End
+If Q=X:Then:1→R:0→X:End
+If Q=Y:Then:1→R:0→Y:End
+If Q=Z:Then:1→R:0→Z:End
+If R=1
+Output(5,14,"T
+If R=1 and A=5 and B=14:Then
+ClrHome
+0→R
+End
+If K=24 or K=25 or K=26 or K=34
+Q+1→Q
+If Ans
+Output(A,B," ")
+min(10,max(1,A+sum(List(K={25,34→A
+min(26,max(1,B+sum(List(K={24,26→B
+Output(A,Ans,"X
+If K=11
+1000→Q
+If A>C and T=int(T
+C+1→C
+If A<C and T=int(T
+C-1→C
+If B>D and T=int(T
+D+1→D
+If B<D and T=int(T
+D-1→D
+Output(C,D,"O
+T+G→T
+End
+If θ=1:Then
+Output(5,9,"GAME OVER
+Output(6,9,"SCORE: "
+Output(6,16,Q
+Pause 
+End
+If θ≠0
+Goto ME
+Lbl X
+ClrHome
