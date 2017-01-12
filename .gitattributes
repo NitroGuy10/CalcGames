@@ -1,2 +1,2 @@
 $ cat .gitattributes
-*.rb linguist-language=Ti-Basic
+*.rb linguist-language=TI Program
