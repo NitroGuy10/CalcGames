@@ -1,2 +1,2 @@
 # CalcGames
-Experimental games for TI-84+C, TI-84+CSE, TI-84+CE calculators
+Experimental games for TI-84+C (Silver Edition), TI-84+CE calculators 
