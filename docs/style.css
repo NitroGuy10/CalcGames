@@ -1,0 +1,8 @@
+@font-face {
+  font-family: sm256;
+  src: SuperMario256.ttf;
+}
+h1 {
+  font-size: 200px;
+  font-family: sm256, "Cooper Black", Arial, sans-serif;
+}
