@@ -3,6 +3,7 @@
   src: SuperMario256.ttf;
 }
 h1 {
+  text-align: center;
   font-size: 200px;
   font-family: sm256, "Cooper Black", Arial, sans-serif;
 }
