@@ -1,6 +1,6 @@
 @font-face {
   font-family: sm256;
-  src: SuperMario256.ttf;
+  src: url(SuperMario256.ttf);
 }
 h1 {
   text-align: center;
