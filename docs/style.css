@@ -23,6 +23,7 @@ p {
   font-family: "Lucida Console", Arial, sans-serif;
 }
 li {
+  line-height: 150%;
   font-size: 24px;
   font-size: 2vw;
   font-family: "Lucida Console", Arial, sans-serif;
