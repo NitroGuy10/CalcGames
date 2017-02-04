@@ -1,4 +1,4 @@
-@font-face {
+.5@font-face {
   font-family: sm256;
   src: url(SuperMario256.ttf);
   /* http://www.dafont.com/super-mario-256.font */
@@ -19,13 +19,13 @@ h2 {
 }
 p {
   font-size: 24px;
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-family: "Lucida Console", Arial, sans-serif;
 }
 li {
   line-height: 150%;
   font-size: 24px;
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-family: "Lucida Console", Arial, sans-serif;
 }
 footer {
