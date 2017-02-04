@@ -14,18 +14,18 @@ h1 {
 }
 h2 {
   font-size: 72px;
-  font-size: 5vw;
+  font-size: 3vw;
   font-family: "Lucida Console", Arial, sans-serif;
 }
 p {
   font-size: 24px;
-  font-size: 2vw;
+  font-size: 1vw;
   font-family: "Lucida Console", Arial, sans-serif;
 }
 li {
   line-height: 150%;
   font-size: 24px;
-  font-size: 2vw;
+  font-size: 1vw;
   font-family: "Lucida Console", Arial, sans-serif;
 }
 footer {
