@@ -1,0 +1,179 @@
+SetUpEditor ⌊S2HS
+5→dim(⌊S2HS
+FnOff 
+BackgroundOn BLACK
+AxesOff
+ZStandard
+For(M,2,5)
+If ⌊S2HS(M)=0 and M<4
+M*5→⌊S2HS(M)
+If ⌊S2HS(M)=0 and M>3
+1→⌊S2HS(M)
+End
+⌊S2HS(2)→L
+⌊S2HS(3)→M
+⌊S2HS(4)→N
+⌊S2HS(5)→O
+Lbl ST
+ClrDraw
+TextColor(BLUE
+Text(50,87," MATRIX RACER
+TextColor(BLACK
+Text(100,80," [ENTER] TO PLAY
+Text(125,70," [2ND] FOR SETTINGS
+Text(149,43," [CLEAR] TO EXIT AT ANY TIME
+­1→θ
+0→Z
+1→Q
+0→K
+Goto ME
+Lbl SU
+ClrDraw
+Pt-On(­4,1,2,WHITE
+TextColor(BLACK
+Text(70,90," PLAYER COLOR
+Text(85,92," ENEMY COLOR
+Text(100,92," PLAYER MARK
+Text(115,94," ENEMY MARK
+Text(130,110," REVERT
+Text(145,90," CLEAR SCORES
+Text(1,1," PLAYER
+Text(1,217," ENEMY
+Pt-On(­8.5,5,L,N
+Pt-On(8.5,5,M,O
+Repeat θ>­2
+getKey→K
+If Ans=45
+Goto ST
+If K=34 and Q>­9:Then
+Pt-Off(­4,Q,2
+Q-2→Q
+Pt-On(­4,Q,2,WHITE
+End
+If K=25 and Q<1:Then
+Pt-Off(­4,Q,2
+Q+2→Q
+Pt-On(­4,Q,2,WHITE
+End
+If K=105:Then
+Pt-Off(­8.5,5,N
+Pt-Off(8.5,5,O
+If Q=1 and L<25
+L+1→L
+If Q=1 and L>24
+10→L
+If Q=­1 and M<25
+M+1→M
+If Q=­1 and M>24
+10→M
+If Q=­3 and N<5
+N+1→N
+If Q=­3 and N>4
+1→N
+If Q=­5 and O<5
+O+1→O
+If Q=­5 and O>4
+1→O
+If Q=­7:Then
+10→L
+15→M
+1→N
+1→O
+End
+If Q=­9
+0→⌊S2HS(1)
+Pt-On(­8.5,5,N,L
+Pt-On(8.5,5,O,M
+End
+End
+Lbl ME
+Repeat θ≠­1
+getKey→K
+If Ans=105
+0→θ
+If K=45
+Goto EX
+If K=21:Then
+­2→θ
+Goto SU
+End
+End
+0.1→A
+0.1→B
+0→C
+0→D
+10→X
+0→V
+0→W
+.1→T
+.1→P
+0→K
+0→H
+ClrDraw
+Text(1,65,"ARROW KEYS TO MOVE
+Text(21,23,"DONT LET YOUR OPPONENT HIT YOU
+Text(41,125,"GO!
+­10→Y
+Repeat θ=1 or K=45
+getKey→K
+Text(1,1,Z
+If int(A)=int(X) and int(B)=int(Y)
+1→θ
+If K=25
+C+P→C
+If K=26
+D+P→D
+If K=24
+D-P→D
+If K=34
+C-P→C
+C*.9→C
+D*.9→D
+A+C→A
+B+D→B
+If A>10
+9.9→A
+If A<­10
+­9.9→A
+If B>10
+9.9→B
+If B<­10
+­9.9→B
+If A>X
+V+T→V
+If A<X
+V-T→V
+If B>Y
+W+T→W
+If B<Y
+W-T→W
+V*.9→V
+W*.9→W
+X+V→X
+Y+W→Y
+If X>10
+9.9→X
+If X<­10
+­9.9→X
+If Y>10
+9.9→Y
+If Y<­10
+­9.9→Y
+Pt-On(B,A,L,N
+Pt-On(Y,X,M,O
+Z+.2→Z
+End
+Lbl EX
+ZStandard:AxesOn :FnOn :ClrDraw
+BackgroundOff
+Disp "YOUR SCORE:",Z
+⌊S2HS(1)→H
+If Z>H
+Z→H
+Disp "HIGH SCORE:",H
+H→⌊S2HS(1)
+L→⌊S2HS(2)
+M→⌊S2HS(3)
+N→⌊S2HS(4)
+O→⌊S2HS(5)
+Archive ⌊S2HS
