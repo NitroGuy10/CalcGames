@@ -22,14 +22,14 @@ TextColor(BLACK
 Text(100,80," [ENTER] TO PLAY
 Text(125,70," [2ND] FOR SETTINGS
 Text(149,43," [CLEAR] TO EXIT AT ANY TIME
-­1→θ
+-1→θ
 0→Z
 1→Q
 0→K
 Goto ME
 Lbl SU
 ClrDraw
-Pt-On(­4,1,2,WHITE
+Pt-On(-4,1,2,WHITE
 TextColor(BLACK
 Text(70,90," PLAYER COLOR
 Text(85,92," ENEMY COLOR
@@ -39,62 +39,62 @@ Text(130,110," REVERT
 Text(145,90," CLEAR SCORES
 Text(1,1," PLAYER
 Text(1,217," ENEMY
-Pt-On(­8.5,5,L,N
+Pt-On(-8.5,5,L,N
 Pt-On(8.5,5,M,O
-Repeat θ>­2
+Repeat θ>-2
 getKey→K
 If Ans=45
 Goto ST
-If K=34 and Q>­9:Then
-Pt-Off(­4,Q,2
+If K=34 and Q>-9:Then
+Pt-Off(-4,Q,2
 Q-2→Q
-Pt-On(­4,Q,2,WHITE
+Pt-On(-4,Q,2,WHITE
 End
 If K=25 and Q<1:Then
-Pt-Off(­4,Q,2
+Pt-Off(-4,Q,2
 Q+2→Q
-Pt-On(­4,Q,2,WHITE
+Pt-On(-4,Q,2,WHITE
 End
 If K=105:Then
-Pt-Off(­8.5,5,N
+Pt-Off(-8.5,5,N
 Pt-Off(8.5,5,O
 If Q=1 and L<25
 L+1→L
 If Q=1 and L>24
 10→L
-If Q=­1 and M<25
+If Q=-1 and M<25
 M+1→M
-If Q=­1 and M>24
+If Q=-1 and M>24
 10→M
-If Q=­3 and N<5
+If Q=-3 and N<5
 N+1→N
-If Q=­3 and N>4
+If Q=-3 and N>4
 1→N
-If Q=­5 and O<5
+If Q=-5 and O<5
 O+1→O
-If Q=­5 and O>4
+If Q=-5 and O>4
 1→O
-If Q=­7:Then
+If Q=-7:Then
 10→L
 15→M
 1→N
 1→O
 End
-If Q=­9
+If Q=-9
 0→⌊S2HS(1)
-Pt-On(­8.5,5,N,L
+Pt-On(-8.5,5,N,L
 Pt-On(8.5,5,O,M
 End
 End
 Lbl ME
-Repeat θ≠­1
+Repeat θ≠-1
 getKey→K
 If Ans=105
 0→θ
 If K=45
 Goto EX
 If K=21:Then
-­2→θ
+-2→θ
 Goto SU
 End
 End
@@ -113,7 +113,7 @@ ClrDraw
 Text(1,65,"ARROW KEYS TO MOVE
 Text(21,23,"DONT LET YOUR OPPONENT HIT YOU
 Text(41,125,"GO!
-­10→Y
+-10→Y
 Repeat θ=1 or K=45
 getKey→K
 Text(1,1,Z
@@ -133,12 +133,12 @@ A+C→A
 B+D→B
 If A>10
 9.9→A
-If A<­10
-­9.9→A
+If A<-10
+-9.9→A
 If B>10
 9.9→B
-If B<­10
-­9.9→B
+If B<-10
+-9.9→B
 If A>X
 V+T→V
 If A<X
@@ -153,12 +153,12 @@ X+V→X
 Y+W→Y
 If X>10
 9.9→X
-If X<­10
-­9.9→X
+If X<-10
+-9.9→X
 If Y>10
 9.9→Y
-If Y<­10
-­9.9→Y
+If Y<-10
+-9.9→Y
 Pt-On(B,A,L,N
 Pt-On(Y,X,M,O
 Z+.2→Z
